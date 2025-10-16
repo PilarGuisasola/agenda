@@ -19,7 +19,7 @@ export class ContactListItem {
   openDeleteModal(){
     interface SwalResult {
       isDenied: boolean;
-      // You can add other properties from the SwalResult if needed
+     
     }
 
     Swal.fire({
@@ -30,7 +30,7 @@ export class ContactListItem {
       cancelButtonText: "Cancelar",
       denyButtonText: `Eliminar definitivamente`
     }).then((result: SwalResult) => {
-      if (result.isDenied) { //Reviso que haya clickeado en el botón rojo.
+      if (result.isDenied) { 
         this.contactsService.deleteContact(this.contact().id);
       }
     });
