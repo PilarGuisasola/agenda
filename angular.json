@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "agenda": {
+    "agenda-contactos-apps-nativas-2025": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -61,10 +61,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "agenda:build:production"
+              "buildTarget": "agenda-contactos-apps-nativas-2025:build:production"
             },
             "development": {
-              "buildTarget": "agenda:build:development"
+              "buildTarget": "agenda-contactos-apps-nativas-2025:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -94,5 +94,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

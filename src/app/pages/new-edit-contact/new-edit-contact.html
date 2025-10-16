@@ -1,4 +1,3 @@
-<p>new-edit-contact works!</p>
 <!-- Toda la parte de nuevo contacto luego irá en una nueva pestaña o en una ventana emergente. A elección. -->
 <div id="container" class="card">
  @if(idContacto()){
@@ -43,13 +42,16 @@
     <input id="image" name="image" type="text" ngModel minlength="10">
   </div>
   @if (errorEnBack) {
-      <p class="error">Error indeterminado, intente nuevamente.</p>
-    } 
-    @if(idContacto()){
-      <button [disabled]="newContactForm.invalid">Editar</button>
-    } @else {
-    <button [disabled]="newContactForm.invalid">Crear</button>
- }
-
- </form>
- </div>
+    <p class="error">Error indeterminado, intente nuevamente.</p>
+  } 
+  @if(idContacto()){
+    <button [disabled]="newContactForm.invalid || isLoading">Editar</button>
+  } @else {
+  <button [disabled]="newContactForm.invalid || isLoading">Crear</button>
+  }
+  @if(isLoading){
+    <app-spinner></app-spinner>
+  }
+</form>
+</div>
+<app-spinner></app-spinner>
