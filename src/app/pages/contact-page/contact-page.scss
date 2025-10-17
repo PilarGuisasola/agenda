@@ -1,5 +1,65 @@
 
+.contact-page, ul {
+  max-width: 850px;
+  margin: 3rem auto;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 8px 25px rgba(255, 182, 193, 0.3);
+  font-family: 'Poppins', sans-serif;
+}
 
-.error{
-    color: var(--color-error);
+.contact-page > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.5fr 1fr 1fr;
+  font-weight: 600;
+  color: #b03060;
+  border-bottom: 2px solid #f3a6c6;
+  padding-bottom: 0.7rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+ul a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul app-contact-list-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.5fr 1fr 1fr;
+  padding: 0.9rem;
+  border-radius: 0.8rem;
+  transition: background-color 0.25s ease;
+
+  &:hover {
+    background-color: #ffe4ef;
+    cursor: pointer;
+  }
+}
+
+/* Botón flotante + */
+a[routerLink="/contacts/new"] {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: #e75480;
+  color: #fff;
+  font-size: 2rem;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 3rem;
+  box-shadow: 0 6px 15px rgba(231, 84, 128, 0.3);
+  transition: all 0.25s ease;
+
+  &:hover {
+    background-color: #d63c6a;
+    transform: scale(1.05);
+  }
 }
