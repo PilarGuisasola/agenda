@@ -10,7 +10,7 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-contacts-page',
   imports: [RouterModule,ContactListItem, FormsModule],
   templateUrl: './contact-page.html',
-  styleUrl: './contacts-page.scss'
+  styleUrl: './contact-page.scss'
 })
 export class ContactsPage implements OnInit {
   ngOnInit(): void {
