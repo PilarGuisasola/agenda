@@ -8,9 +8,9 @@ import { Spinner } from '../../components/spinner/spinner';
 @Component({
   selector: 'app-new-edit-contact',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, Spinner],
   templateUrl: './new-edit-contact.html',
-  styleUrl: './new-edit-contact.scss'
+  styleUrls: ['./new-edit-contact.scss']
 })
 export class NewEditContact implements OnInit {
   contactsService = inject(ContactsService);
