@@ -8,7 +8,7 @@ import { Spinner } from '../../components/spinner/spinner';
 @Component({
   selector: 'app-new-edit-contact',
   standalone: true,
-  imports: [FormsModule, Spinner],
+  imports: [FormsModule],
   templateUrl: './new-edit-contact.html',
   styleUrl: './new-edit-contact.scss'
 })
