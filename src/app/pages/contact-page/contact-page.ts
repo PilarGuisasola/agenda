@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-contacts-page',
   imports: [RouterModule,ContactListItem, FormsModule],
-  templateUrl: './contacts-page.html',
+  templateUrl: './contact-page.html',
   styleUrl: './contacts-page.scss'
 })
 export class ContactsPage implements OnInit {

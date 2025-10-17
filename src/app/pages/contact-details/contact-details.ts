@@ -4,12 +4,12 @@ import { Contact } from '../../interfaces/contact';
 import { Router, RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-contact-details-page',
+  selector: 'app-contact-details',
   imports: [RouterModule],
-  templateUrl: './contact-details-page.html',
-  styleUrl: './contact-details-page.scss'
+  templateUrl: './contact-details.html',
+  styleUrl: './contact-details.scss'
 })
-export class ContactDetailsPage implements OnInit {
+export class ContactDetails implements OnInit {
   idContacto = input.required<string>();
   readonly contactService = inject(ContactsService);
   contacto: Contact | undefined;
