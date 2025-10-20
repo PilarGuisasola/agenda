@@ -1,103 +1,82 @@
-
-.main-container {
-  background-color: #ffe6ec; 
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  padding: 1.5rem;
-}
-
-
-.header {
-  background-color: #f06292; 
-  color: white;
-  padding: 1rem 2rem;
-  border-radius: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: bold;
-  margin-bottom: 2rem;
-}
-
-.header h2 {
-  margin: 0;
-  cursor: pointer;
-  transition: opacity 0.2s ease;
-}
-
-.header h2:hover {
-  opacity: 0.8;
-}
-
-.logout {
-  background-color: white;
-  color: #f06292;
-  border: none;
-  border-radius: 20px;
-  padding: 0.5rem 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.logout:hover {
-  background-color: #f8bbd0;
-}
-
-.contact-table {
-  background-color: white;
-  border-radius: 1rem;
-  padding: 1rem 2rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-
-.table-header {
+div:first-of-type {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: 2fr 2fr 3fr 2fr 2fr;
+  gap: 1rem;
   font-weight: 600;
-  border-bottom: 2px solid #f8bbd0;
-  padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  background-color: #f3f4f6; /* gris claro */
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: #374151;
 }
 
-
+/* Lista de contactos */
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
+/* Cada item de la lista (component app-contact-list-item) */
 app-contact-list-item {
-  display: block;
-  padding: 0.8rem 0;
-  border-bottom: 1px solid #fce4ec;
-  transition: background-color 0.2s ease;
+  display: grid;
+  grid-template-columns: 2fr 2fr 3fr 2fr 2fr;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.1s, box-shadow 0.2s;
 }
 
 app-contact-list-item:hover {
-  background-color: #fff0f5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-
-.add-button {
+/* Botón flotante para agregar contacto */
+a[routerLink="/contacts/new"] {
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  background-color: #2196f3;
-  color: white;
+  background-color: #4f46e5; /* azul violeta */
+  color: #fff;
   font-size: 2rem;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  text-align: center;
-  line-height: 60px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   text-decoration: none;
-  transition: background-color 0.2s ease;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: background-color 0.2s, transform 0.1s;
 }
 
-.add-button:hover {
-  background-color: #1976d2;
+a[routerLink="/contacts/new"]:hover {
+  background-color: #3730a3;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  div:first-of-type,
+  app-contact-list-item {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    gap: 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  div:first-of-type span:nth-child(4),
+  div:first-of-type span:nth-child(5),
+  app-contact-list-item:nth-child(4),
+  app-contact-list-item:nth-child(5) {
+    display: none; /* Oculta columnas menos importantes en móvil */
+  }
 }

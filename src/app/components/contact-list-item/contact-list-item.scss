@@ -1,46 +1,100 @@
-
-.contact-item {
+li {
   display: grid;
-  grid-template-columns: 1fr 1fr 1.5fr 1fr 1fr;
+  grid-template-columns: 2fr 2fr 3fr 1fr 2fr 1fr; /* anchos proporcionales */
   align-items: center;
-  padding: 0.8rem;
-  border-radius: 0.8rem;
-  transition: background-color 0.25s ease;
-  font-family: 'Poppins', sans-serif;
-}
-
-.contact-item:hover {
-  background-color: #fff0f5;
-}
-
-.contact-item span {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.contact-item .actions {
-  display: flex;
-  justify-content: center;
+  padding: 0.75rem 1rem;
+  background-color: #fff;
+  border-radius: 8px;
+  border-left: 4px solid transparent;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-bottom: 0.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #374151;
   gap: 0.5rem;
 }
 
-.contact-item .actions button {
-  background: none;
+/* Hover suave */
+li:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+  transition: all 0.2s;
+}
+
+/* Favorito */
+li.favourite {
+  border-left: 4px solid #facc15;
+  background-color: #fff9e5;
+}
+
+/* Span de texto */
+li span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+/* Columna de acciones (botones y link) */
+li span:nth-child(5) {
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+/* Botones */
+li button {
+  background-color: #ef4444;
+  color: #fff;
   border: none;
-  font-size: 1.2rem;
+  border-radius: 6px;
+  padding: 0.35rem 0.75rem;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  font-size: 0.85rem;
+  transition: all 0.2s;
 }
 
-.contact-item .actions button:hover {
-  transform: scale(1.2);
+li button:hover {
+  background-color: #dc2626;
+  transform: translateY(-1px);
 }
 
-.contact-item .actions button:first-child {
-  color: #e75480;
+/* Link editar */
+li a {
+  background-color: #4f46e5;
+  color: #fff;
+  border-radius: 6px;
+  padding: 0.35rem 0.75rem;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: all 0.2s;
 }
 
-.contact-item .actions button:last-child {
-  color: #d6336c;
+li a:hover {
+  background-color: #3730a3;
+  transform: translateY(-1px);
+}
+
+/* Columna de estrella de favorito */
+li span:last-child {
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  li {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    gap: 0.5rem;
+  }
+
+  li span {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  li span:nth-child(5),
+  li span:last-child {
+    justify-content: flex-start;
+  }
 }
