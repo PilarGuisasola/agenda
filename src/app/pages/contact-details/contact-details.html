@@ -3,17 +3,17 @@
 } @else if(!contacto) {
   <p>No se encontró el contacto</p>
 } @else {
-  <h1>{{contacto!.firstName}} {{contacto!.lastName}}</h1>
-  <p>Email: {{contacto.email}}</p>
-  <p>Teléfono: {{contacto.number}}</p>
+  <h1>{{ contacto!.firstName }} {{ contacto!.lastName }}</h1>
+  <p>Email: {{ contacto.email }}</p>
+  <p>Teléfono: {{ contacto.number }}</p>
 
   @if (contacto.isFavorite) {
-    <svg width="24" height="24" fill="gold" xmlns="http://www.w3.org/2000/svg">
+    <svg width="24" height="24" fill="gold" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;">
       <path d="M12 .587l3.668 7.571 8.332 1.151-6.064 5.938 1.436 8.283L12 18.896l-7.372 4.634 1.436-8.283L0 9.309l8.332-1.151z"/>
     </svg>
     <button (click)="toggleFavorite()">Desmarcar favorito</button>
   } @else {
-    <svg width="24" height="24" fill="gray" xmlns="http://www.w3.org/2000/svg">
+    <svg width="24" height="24" fill="gray" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;">
       <path d="M12 .587l3.668 7.571 8.332 1.151-6.064 5.938 1.436 8.283L12 18.896l-7.372 4.634 1.436-8.283L0 9.309l8.332-1.151z"/>
     </svg>
     <button (click)="toggleFavorite()">Marcar como favorito</button>
