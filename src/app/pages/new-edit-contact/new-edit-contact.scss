@@ -27,12 +27,12 @@ form {
 
   div {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
 
     label {
       margin-bottom: 0.3rem;
       font-weight: bold;
-      color: darken($primary-color, 20%);
+      color: dark;
     }
 
     input[type="text"],
@@ -76,11 +76,11 @@ form {
     transition: all 0.3s ease;
 
     &:hover:not(:disabled) {
-      background-color: darken($primary-color, 10%);
+      background-color:dark;
     }
 
     &:disabled {
-      background-color: lighten($primary-color, 30%);
+      background-color: gray;
       cursor: not-allowed;
     }
   }

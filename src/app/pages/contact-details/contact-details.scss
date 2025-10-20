@@ -1,92 +1,102 @@
-
 :host {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  padding: 2rem;
-  max-width: 420px;
+  display: block;
+  max-width: 500px;
   margin: 2rem auto;
-  background-color: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-  font-family: 'Arial', sans-serif;
+  padding: 1.5rem;
+  background-color: #fefefe;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
 }
 
-
-p {
-  font-size: 1rem;
-  text-align: center;
-  margin: 0.25rem 0;
-  color: #555;
-
-  &:first-child {
-    font-style: italic;
-    color: #999;
-  }
-}
-
-
+/* Títulos */
 h1 {
-  font-size: 1.8rem;
-  font-weight: 700;
+  font-size: 2rem;
   margin-bottom: 0.5rem;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-
-p:nth-of-type(2),
-p:nth-of-type(3) {
-  font-weight: 500;
-  color: #666;
-  margin: 0.25rem 0;
-  text-align: center;
+/* Párrafos */
+p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
 }
 
-
-p:has(span), 
-p:nth-of-type(4) {
-  font-size: 1.5rem;
-  color: gold;
-  text-align: center;
-  margin: 0.25rem 0;
-}
-
-
-button {
-  background-color: #ff4081;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  font-weight: 600;
-  margin: 0.25rem 0;
-  transition: background-color 0.2s;
-
-  &:hover {
-    background-color: #e73370;
-  }
-}
-
-
-button:last-of-type {
-  background-color: #f44336;
-
-  &:hover {
-    background-color: #d32f2f;
-  }
-}
-
-
+/* Enlaces */
 a {
+  color: #4f46e5;
   text-decoration: none;
-  color: #2196f3;
   font-weight: 500;
   transition: color 0.2s;
+}
 
-  &:hover {
-    color: #0b79d0;
+a:hover {
+  color: #3730a3;
+  text-decoration: underline;
+}
+
+/* Botones generales */
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.2s, transform 0.1s;
+  margin-top: 0.5rem;
+}
+
+/* Botones de favorito */
+button:nth-of-type(1) {
+  background-color: #facc15; /* amarillo para favorito */
+  color: #fff;
+}
+
+button:nth-of-type(2) {
+  background-color: #9ca3af; /* gris para no favorito */
+  color: #fff;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Botón de eliminar */
+button:last-of-type {
+  background-color: #ef4444; /* rojo */
+  color: #fff;
+  margin-top: 1rem;
+}
+
+button:last-of-type:hover {
+  background-color: #dc2626;
+}
+
+/* Mensajes de estado */
+p:first-of-type {
+  font-style: italic;
+  color: #6b7280;
+}
+
+/* SVG de estrella */
+svg {
+  vertical-align: middle;
+  margin-right: 0.3rem;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  :host {
+    padding: 1rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  button {
+    font-size: 0.9rem;
   }
 }

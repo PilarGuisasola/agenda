@@ -1,19 +1,15 @@
 <li [class.favourite]="contact().isFavorite === true">
-  <span>{{ contact().firstName }} {{ contact().lastName }}</span>
-  <span>{{ contact().number }}</span>
-  <span>{{ contact().email }}</span>
-  <span>-</span>
-  <span>
-    <button (click)="openDeleteModal()">Borrar</button>
-    <a [routerLink]="['/contacts', contact().id, 'edit']">Editar</a>
-  </span>
-
-  <span>
-    <i
-      class="fa-star star"
-      [ngClass]="contact().isFavorite ? 'fa-solid active' : 'fa-regular inactive'"
-      (click)="toggleFavorite(contact())"
-    ></i>
-  </span>
+    <span>{{contact().firstName}} {{contact().lastName}}</span>
+    <span>{{contact().number}}</span>
+    <span>{{contact().email}}</span>
+    <span>-</span>
+    <span>
+        <button (click)="openDeleteModal()">Borrar</button>
+        <a [routerLink]="['/contacts',contact().id,'edit']">Editar</a>
+    </span>
+    <span>
+        @if (contact().isFavorite === true) {
+            ⭐
+        }
+    </span>
 </li>
-
