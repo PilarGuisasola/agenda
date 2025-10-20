@@ -1,14 +1,12 @@
-/* styles-agenda.scss */
 
-/* Variables de colores */
-$primary-color: #ff6f91; // Rosa principal
-$secondary-color: #ffe0e6; // Rosa claro de fondo
-$error-color: #ff4d4d; // Rojo para errores
+$primary-color: #ff6f91; 
+$secondary-color: #ffe0e6; 
+$error-color: #ff4d4d; 
 $input-border: #ccc;
 $input-focus-border: $primary-color;
 $button-text-color: #fff;
 
-/* Contenedor del formulario */
+
 form {
   max-width: 500px;
   margin: 2rem auto;
@@ -94,7 +92,7 @@ form {
   }
 }
 
-/* Responsivo */
+
 @media (max-width: 600px) {
   form {
     padding: 1rem;

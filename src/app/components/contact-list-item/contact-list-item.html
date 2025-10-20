@@ -7,13 +7,13 @@
     <button (click)="openDeleteModal()">Borrar</button>
     <a [routerLink]="['/contacts', contact().id, 'edit']">Editar</a>
   </span>
+
   <span>
-    <button (click)="toggleFavorite(contact())" style="background:none; border:none; cursor:pointer;">
-      @if (contact().isFavorite) {
-        <i class="fa-solid fa-star" style="color: gold; font-size: 18px;"></i>
-      } @else {
-        <i class="fa-regular fa-star" style="color: gray; font-size: 18px;"></i>
-      }
-    </button>
+    <i
+      class="fa-star star"
+      [ngClass]="contact().isFavorite ? 'fa-solid active' : 'fa-regular inactive'"
+      (click)="toggleFavorite(contact())"
+    ></i>
   </span>
 </li>
+
