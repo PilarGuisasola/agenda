@@ -1,15 +1,19 @@
 <li [class.favourite]="contact().isFavorite === true">
-    <span>{{contact().firstName}} {{contact().lastName}}</span>
-    <span>{{contact().number}}</span>
-    <span>{{contact().email}}</span>
-    <span>-</span>
-    <span>
-        <button (click)="openDeleteModal()">Borrar</button>
-        <a [routerLink]="['/contacts',contact().id,'edit']">Editar</a>
-    </span>
-    <span>
-        @if (contact().isFavorite === true) {
-            ⭐
-        }
-    </span>
+  <span>{{ contact().firstName }} {{ contact().lastName }}</span>
+  <span>{{ contact().number }}</span>
+  <span>{{ contact().email }}</span>
+  <span>-</span>
+  <span>
+    <button (click)="openDeleteModal()">Borrar</button>
+    <a [routerLink]="['/contacts', contact().id, 'edit']">Editar</a>
+  </span>
+  <span>
+    <button (click)="toggleFavorite(contact())" style="background:none; border:none; cursor:pointer;">
+      @if (contact().isFavorite) {
+        <i class="fa-solid fa-star" style="color: gold; font-size: 18px;"></i>
+      } @else {
+        <i class="fa-regular fa-star" style="color: gray; font-size: 18px;"></i>
+      }
+    </button>
+  </span>
 </li>
