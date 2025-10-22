@@ -1,10 +1,10 @@
 
-$primary-color: #ff6f91; 
-$secondary-color: #ffe0e6; 
-$error-color: #ff4d4d; 
-$input-border: #ccc;
-$input-focus-border: $primary-color;
-$button-text-color: #fff;
+$primary-color:rgb(167, 81, 141); 
+$secondary-color: rgb(233, 170, 203); 
+$error-color: rgb(150, 75, 147); 
+$input-border: WHITE;
+$input-focus-border: rgb(227, 168, 222);
+$button-text-color: #b955ac;
 
 
 form {
@@ -13,7 +13,7 @@ form {
   padding: 2rem;
   background-color: $secondary-color;
   border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(251, 253, 253, 0.929);
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -80,7 +80,7 @@ form {
     }
 
     &:disabled {
-      background-color: gray;
+      background-color: rgb(248, 192, 231);
       cursor: not-allowed;
     }
   }

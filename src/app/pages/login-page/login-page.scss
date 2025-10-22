@@ -10,7 +10,7 @@
 }
 
 #container.card h1 {
-  color: #e75480;
+  color: #953286;
   font-size: 1.8rem;
   margin-bottom: 1.8rem;
 }
@@ -28,7 +28,7 @@
 }
 
 #container.card form label {
-  color: #b03060;
+  color: #a54e84;
   font-weight: 500;
   margin-bottom: 0.4rem;
 }
@@ -37,30 +37,30 @@
   width: 100%;
   padding: 0.7rem 0.9rem;
   border-radius: 0.8rem;
-  border: 1.5px solid #f3a6c6;
+  border: 1.5px solid #734176;
   background-color: #fff;
   transition: all 0.25s ease-in-out;
 }
 
 #container.card form input:focus {
-  border-color: #e75480;
+  border-color: #ad5fa4;
   box-shadow: 0 0 0 3px rgba(231, 84, 128, 0.2);
 }
 
 #container.card form input:invalid.ng-touched {
-  border-color: #ff4f8b;
+  border-color: #e58ccf;
   background-color: #fff0f5;
 }
 
 #container.card form .error {
-  color: #d6336c;
+  color: #ed98e9;
   font-size: 0.85rem;
   margin-top: 0.3rem;
 }
 
 #container.card form button {
   margin-top: 0.5rem;
-  background-color: #e75480;
+  background-color: #de98cf;
   color: #fff;
   border: none;
   border-radius: 2rem;
@@ -71,12 +71,12 @@
 }
 
 #container.card form button:hover {
-  background-color: #d63c6a;
+  background-color: #f2a3ed;
   transform: scale(1.03);
 }
 
 #container.card form button:disabled {
-  background-color: #f3a6c6;
+  background-color: #8c4494;
   cursor: not-allowed;
   opacity: 0.7;
 }
@@ -88,7 +88,7 @@
 }
 
 #container.card form p a {
-  color: #e75480;
+  color: #8a4973;
   font-weight: 500;
   text-decoration: none;
 }
